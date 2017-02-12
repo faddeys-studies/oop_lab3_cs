@@ -52,7 +52,9 @@ namespace oop_lab3_cs.shell.tokens {
         }
 
         public static T TryConvert<T>(Token token) where T : class {
-            return null;
+            if (token == null) return null;
+            if (!(token is T)) return null;
+            return (T)Convert.ChangeType(token, typeof(T));
         }
 
         public static bool operator ==(Token first, Token second) {
@@ -77,6 +79,8 @@ namespace oop_lab3_cs.shell.tokens {
         }
 
         public AssignmentToken() : this("") { }
+
+        public string Name { get { return var_name; } }
 
         public override int Parse(string code) {
             int name_start = -1;
@@ -125,6 +129,8 @@ namespace oop_lab3_cs.shell.tokens {
 
         public NameToken() : this("") { }
 
+        public string Name { get { return var_name; } }
+
         public override int Parse(string code) {
             char first_non_space = code.FirstOrDefault(ch => " \t\n".IndexOf(ch) < 0);
             if (first_non_space == '\0') return -1;
@@ -158,6 +164,8 @@ namespace oop_lab3_cs.shell.tokens {
         }
 
         public NumberLiteralToken() : this(0) { }
+
+        public int Value { get { return value; } }
 
         public override int Parse(string code) {
             bool started_parsing = false;
@@ -205,6 +213,8 @@ namespace oop_lab3_cs.shell.tokens {
         }
 
         public StringLiteralToken() : this("") { }
+
+        public string Value { get { return value; } }
 
         public override int Parse(string code) {
             char first_non_space = code.FirstOrDefault(ch => " \t\n".IndexOf(ch) < 0);
@@ -260,6 +270,8 @@ namespace oop_lab3_cs.shell.tokens {
         }
 
         public ParenthesisToken() : this(true) { }
+
+        public bool IsOpen { get { return is_open; } }
 
         public override int Parse(string code) {
             bool started_parsing = false;

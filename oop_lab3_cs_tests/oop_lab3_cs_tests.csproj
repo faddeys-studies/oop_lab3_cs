@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="test_grammar.cs" />
     <Compile Include="test_tokenization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
