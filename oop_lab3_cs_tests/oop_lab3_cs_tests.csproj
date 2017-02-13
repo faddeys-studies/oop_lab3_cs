@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="test_grammar.cs" />
+    <Compile Include="test_shell_functions.cs" />
     <Compile Include="test_shell_objects.cs" />
     <Compile Include="test_tokenization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

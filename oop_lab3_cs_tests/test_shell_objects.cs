@@ -15,13 +15,16 @@ namespace oop_lab3_cs_tests {
 
             Assert.IsTrue(obj.HasSameType(obj));
             Assert.IsTrue(obj.HasType<int>());
+            Assert.IsTrue(obj.HasType(typeof(int)));
             Assert.IsFalse(obj.HasType<string>());
+            Assert.IsFalse(obj.HasType(typeof(string)));
             Assert.IsFalse(obj.IsEmpty);
             Assert.AreEqual(obj.Get<int>(), 10);
+            Assert.AreEqual(obj.Get(typeof(int)), 10);
 
             try { obj.Get<float>();
-            } catch (TypeError) { return; }
-            Assert.Fail("Get<wrong-type>() must throw TypeError");
+            } catch (ShellError) { return; }
+            Assert.Fail("Get<wrong-type>() must throw ShellError");
         }
 
         [TestMethod]
@@ -30,8 +33,8 @@ namespace oop_lab3_cs_tests {
             Assert.IsTrue(empty_obj.IsEmpty);
 
             try { empty_obj.Get<float>();
-            } catch (TypeError) { return; }
-            Assert.Fail("Get<any-type>() on Empties must throw TypeError");
+            } catch (ShellError) { return; }
+            Assert.Fail("Get<any-type>() on Empties must throw ShellError");
         }
 
         [TestMethod]
