@@ -50,6 +50,7 @@
     <Compile Include="src\app\hierarchy.cs" />
     <Compile Include="src\app\model.cs" />
     <Compile Include="src\app\queries.cs" />
+    <Compile Include="src\app\shell_api.cs" />
     <Compile Include="src\shell\builtins.cs" />
     <Compile Include="src\shell\functions.cs" />
     <Compile Include="src\shell\grammar.cs" />

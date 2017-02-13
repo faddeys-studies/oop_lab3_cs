@@ -12,7 +12,7 @@ namespace oop_lab3_cs.shell.functions {
     public class ExposeToShell : Attribute {
         public readonly string HelpText;
 
-        public ExposeToShell(string text) { this.HelpText = text; }
+        public ExposeToShell(string text=null) { this.HelpText = text; }
     }
 
 

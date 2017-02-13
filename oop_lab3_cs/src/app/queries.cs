@@ -17,7 +17,7 @@ namespace oop_lab3_cs.app.queries {
             predicate = p;
         }
 
-        List<Employee> run(Company company) {
+        public List<Employee> run(Company company) {
             result = new List<Employee>();
             iterator = (OrderT)Activator.CreateInstance(
                 typeof(OrderT), new object[] { company.Director }
@@ -34,7 +34,6 @@ namespace oop_lab3_cs.app.queries {
 
     };
 
-}}
-
-
 }
+
+
