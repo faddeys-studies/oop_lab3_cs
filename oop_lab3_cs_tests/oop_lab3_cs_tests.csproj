@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="test_db.cs" />
     <Compile Include="test_grammar.cs" />
+    <Compile Include="test_hierarchy_traversing.cs" />
+    <Compile Include="test_models.cs" />
     <Compile Include="test_shell_functions.cs" />
     <Compile Include="test_shell_objects.cs" />
     <Compile Include="test_tokenization.cs" />
