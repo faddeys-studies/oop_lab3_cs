@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\shell\grammar.cs" />
+    <Compile Include="src\shell\objects.cs" />
     <Compile Include="src\shell\tokenization.cs" />
     <Compile Include="src\utilities.cs" />
   </ItemGroup>
